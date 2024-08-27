@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Interativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="home">
+        <div class="content">
+            <div class="message">Exploração Cósmica: Decisões que Moldam o Futuro</div>
+            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjMxN2t6ZG9wZnFpZGtpOG03ZjMzcG4wYXowemQyc2o1NnFvMGhkdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6I65bK6OpkJNvCR4Dj/giphy.webp" class="central-image" alt="Descrição da imagem">
+            <button id="start-btn">Iniciar Jogo</button> <!-- Botão com ID start-btn -->
+        </div>
+    </div>
+    
+    <div id="narrative" style="display: none;">
+        <div class="content">
+            <div id="narrative-card">
+                <p id="narrative-text">Você está no centro de uma crise ambiental. A empresa global Oceanic Energy está planejando uma grande extração de petróleo no fundo do mar, prometendo enormes lucros. No entanto, esse plano pode causar danos irreparáveis à vida marinha e aos ecossistemas oceânicos. Sua missão é decidir como reagir a essa ameaça: você pode escolher agir para proteger o meio ambiente, apoiar as operações da empresa em troca de benefícios econômicos, ou ignorar o problema. Suas escolhas terão um impacto significativo na narrativa e no futuro do oceano.</p>
+                <div id="choices-container">
+                    <!-- Opções serão inseridas aqui via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="end-screen" style="display: none;">
+        <div class="content">
+            <p id="end-text">Obrigado por jogar!</p>
+
+
+            <button id="restart-btn">Voltar para o inicio</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

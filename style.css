@@ -1,0 +1,218 @@
+/* Estilos da página inicial */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FFFFFF; /* Fundo branco */
+    color: #000000; /* Texto preto */
+}
+
+/* Container centralizado */
+.content {
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos das mensagens e imagens */
+.message, .central-image, #narrative-card, #choices-container button, #end-text {
+    background-color: #FFFFFF; /* Fundo branco */
+    color: #000000; /* Texto preto */
+    padding: 16px;
+    border: 2px solid #000000; /* Bordas pretas */
+    border-radius: 12px; /* Cantos arredondados */
+    font-size: 20px; /* Tamanho de fonte legível */
+    font-weight: bold; /* Fonte em negrito */
+    position: relative;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra preta suave */
+    transition: box-shadow 0.3s, border-color 0.3s; /* Transição suave para interações */
+}
+
+.message {
+    white-space: nowrap; /* Impede a quebra de linha */
+}
+
+/* Efeitos de hover para botões */
+button {
+    background-color: #FFFFFF; /* Fundo branco */
+    border: 2px solid #000000; /* Bordas pretas */
+    color: #000000; /* Texto preto */
+    padding: 12px 24px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    margin: 10px; /* Espaçamento entre botões */
+}
+
+/* Efeitos de hover para botões */
+button:hover {
+    background-color: #F0F0F0; /* Fundo levemente cinza */
+    color: #000000; /* Texto preto */
+    border-color: #000000; /* Borda preta */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7); /* Brilho preto intenso */
+    transform: scale(1.05); /* Leve aumento */
+}
+
+/* Efeito de clique dos botões */
+button:active {
+    background-color: #E0E0E0; /* Fundo cinza claro */
+    color: #000000; /* Texto preto */
+    border-color: #000000; /* Borda preta */
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5); /* Sombra interna preta */
+    transform: scale(0.98); /* Leve redução de tamanho */
+}
+
+/* Estilos da imagem central */
+.central-image {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px 0;
+    border-radius: 8%;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease, filter 0.5s ease, box-shadow 0.5s ease, border 0.5s ease;
+    border: 2px solid #000000; /* Borda preta */
+}
+
+.central-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.central-image:hover::before {
+    opacity: 1;
+}
+
+.central-image:hover {
+    transform: scale(1.1); /* Aumenta a imagem em 10% */
+    filter: brightness(1.2); /* Aumenta o brilho */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); /* Brilho preto */
+}
+
+/* Estilos do cartão de narrativa */
+#narrative-card {
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.4); /* Sombra preta */
+    color: #000000; /* Texto preto */
+    max-width: 100%;
+    margin: auto;
+    background-color: #FFFFFF; /* Fundo branco */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Estilos das opções de resposta */
+#choices-container button {
+    background-color: #FFFFFF; /* Fundo branco */
+    border: 2px solid #000000; /* Bordas pretas */
+    color: #000000; /* Texto preto */
+    padding: 12px 24px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    margin: 10px; /* Espaçamento entre botões */
+}
+
+#choices-container button:hover {
+    background-color: #F0F0F0; /* Fundo levemente cinza */
+    color: #000000; /* Texto preto */
+    border-color: #000000; /* Borda preta */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7); /* Brilho preto intenso */
+    transform: scale(1.05); /* Leve aumento */
+}
+
+#choices-container button:active {
+    background-color: #E0E0E0; /* Fundo cinza claro */
+    color: #000000; /* Texto preto */
+    border-color: #000000; /* Borda preta */
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5); /* Sombra interna preta */
+    transform: scale(0.98); /* Leve redução de tamanho */
+}
+
+/* Estilos do texto final */
+#end-text {
+    box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.4); /* Sombra preta */
+    font-size: 24px; /* Aumenta o tamanho da fonte */
+    color: #000000; /* Texto preto */
+    background-color: #FFFFFF; /* Fundo branco */
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold; /* Torna o texto mais grosso */
+}
+
+/* Estilos da tela de fim */
+#end-screen {
+    text-align: center; /* Centraliza o texto e a imagem */
+}
+
+.end-image {
+    width: 300px;    
+    height: 300px;
+    display: block; /* Garante que a imagem seja tratada como um bloco para centralização */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 16px; /* Espaçamento abaixo da imagem */
+    border: 2px solid #000000; /* Borda preta */
+    border-radius: 8%; /* Bordas arredondadas */
+}
+
+#end-text {
+    margin: 16px 0; /* Espaçamento acima e abaixo do texto */
+}
+
+#restart-btn {
+    margin-top: 16px; /* Espaçamento acima do botão */
+}
+
+/* Media queries */
+@media (max-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column; /* Alinha itens verticalmente */
+        justify-content: center;
+        align-items: center;
+        padding: 0; /* Remove o padding */
+    }
+
+    .content {
+        width: 90%; /* Ajusta a largura para se afastar das bordas */
+        padding: 10px; /* Adiciona um pouco de espaçamento */
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 18px; /* Ajusta o tamanho da fonte */
+    }
+
+    #narrative-card {
+        padding: 15px;
+        max-width: 100%; /* Garante que o cartão não ultrapasse a tela */
+        box-sizing: border-box; /* Inclui padding na largura total */
+    }
+
+    #narrative-text {
+        font-size: 18px; /* Ajusta o tamanho da fonte */
+    }
+}
